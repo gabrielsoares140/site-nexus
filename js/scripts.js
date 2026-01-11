@@ -23,7 +23,7 @@ const talents = [
         img: "img/magin.jpg",
         desc: "Conteúdo casual, conversas e criatividade absurda.",
         socials: {
-            twitter: "#"
+            twitter: "https://x.com/magin_don"
         }
     },
     {
@@ -39,8 +39,7 @@ const talents = [
         img: "img/rafinha.jpg",
         desc: "Energia alta, games variados e muita zoeira.",
         socials: {
-            twitter: "#",
-            youtube: "#"
+            instagram: ""
         }
     },
     {

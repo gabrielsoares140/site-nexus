@@ -29,16 +29,18 @@
     </p>
 </section>
 
-<section id="contato">
+<<section id="contato">
     <div class="form-container">
-        <form>
-            <input type="text" placeholder="Seu nome">
-            <input type="email" placeholder="Seu e-mail">
-            <textarea placeholder="Mensagem"></textarea>
+        <form id="contactForm">
+            <input type="text" name="name" placeholder="Seu nome" required>
+            <input type="email" name="email" placeholder="Seu e-mail" required>
+            <input type="text" name="subject" placeholder="Assunto" required>
+            <textarea name="message" placeholder="Mensagem" required></textarea>
             <button type="submit">Enviar</button>
         </form>
     </div>
 </section>
+
 
 <div class="modal" id="talentModal">
     <div class="modal-content">
@@ -52,5 +54,29 @@
     </div>
 </div>
 <script src="/js/scripts.js"></script>
+<script src="https://cdn.emailjs.com/dist/email.min.js"></script>
+
+<script>
+(function(){
+    emailjs.init("Vp9pAn0Wps-4iSXjq");
+})();
+
+document.getElementById("contactForm").addEventListener("submit", function(e) {
+    e.preventDefault();
+
+    emailjs.sendForm(
+        "service_xmthsdq",
+        "template_vop1587",
+        this
+    ).then(() => {
+        alert("Mensagem enviada com sucesso!");
+        this.reset();
+    }, (error) => {
+        alert("Erro ao enviar mensagem");
+        console.log(error);
+    });
+});
+</script>
+
 </body>
 </html>
