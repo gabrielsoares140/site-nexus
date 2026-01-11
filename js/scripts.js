@@ -1,4 +1,3 @@
-// ================= TALENTOS =================
 const talents = [
     {
         name: "Hayatto",
@@ -56,10 +55,9 @@ const talents = [
     }
 ];
 
-// ===== MODAL DE TALENTOS (SEGURO) =====
 function openTalent(index) {
     const modal = document.getElementById("talentModal");
-    if (!modal) return; // evita erro na loja
+    if (!modal) return; 
 
     const talent = talents[index];
 
@@ -97,7 +95,7 @@ function closeTalent() {
     if (modal) modal.style.display = "none";
 }
 
-// ================= LOJA / CARRINHO =================
+
 let carrinho = [];
 let total = 0;
 

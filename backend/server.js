@@ -7,7 +7,6 @@ const app = express();
 app.use(cors());
 app.use(express.json());
 
-// TOKEN DO MERCADO PAGO (TESTE)
 mercadopago.configure({
     access_token: "SEU_TOKEN_AQUI"
 });
