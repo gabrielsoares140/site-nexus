@@ -1,72 +1,57 @@
 <!DOCTYPE html>
-<html lang="pt-BR">
+<html lang="pt-br">
 <head>
     <meta charset="UTF-8">
+    <title>Agência VTuber</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Vtubers Showcase</title>
-    <link rel="stylesheet" href="css/style.css">
+
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-    <header class="header">
-        <nav class="navbar">
-            <h1 class="logo">VTUBERS HUB</h1>
-            <ul class="menu">
-                <li><a href="#home">Home</a></li>
-                <li><a href="#members">Integrantes</a></li>
-                <li><a href="#contact">Contato</a></li>
-            </ul>
-        </nav>
+<header>
+    <nav class="navbar">
+        <div class="logo">Nexus</div>
+        <ul>
+            <li><a href="/index.html">Início</a></li>
+            <li><a href="/talentos.html">Talentos</a></li>
+            <li><a href="/sobre.html">Sobre</a></li>
+            <li><a href="/loja.html">Loja</a></li>
+        </ul>
+    </nav>
+</header>
 
-        <section class="hero" id="home">
-            <h2>Bem-vindo ao Universo VTUBERS</h2>
-            <p>Conheça nossos integrantes com estilo moderno e tecnológico</p>
-            <button onclick="scrollToSection('#members')">Veja os Integrantes</button>
-        </section>
-    </header>
+<section id="home" class="home">
+    <h1>Uma nova geração de VTubers</h1>
+    <p>
+       A Nexus é uma agência V-Tuber brasileira focada em ajudar jovens talentos a ingressarem no mercado V-Tuber, 
+       nossos serviços incluem: ajuda com músicas autorais e covers, modelos V-Tuber e ajuda profissional para jovens V-Tubers.
+    </p>
+</section>
 
-    <main>
-        <section class="members-section" id="members">
-            <h2 class="section-title">Nossos VTubers</h2>
-            <div class="cards-container">
-                <!-- VTuber Cards -->
-                <div class="card" data-name="Vinu">
-                    <img src="https://via.placeholder.com/230" alt="Hayatto">
-                    <h3>Hayatto</h3>
-                </div>
-                <div class="card" data-name="Ayla">
-                    <img src="https://via.placeholder.com/230" alt="Dante">
-                    <h3>Dante</h3>
-                </div>
-                <div class="card" data-name="Kira">
-                    <img src="https://via.placeholder.com/230" alt="Rafinha">
-                    <h3>Rafinha</h3>
-                </div>
-                <div class="card" data-name="Ryo">
-                    <img src="/imagens/432_Sem_Titulo_20250916052547.png" alt="Magin">
-                    <h3>Magin</h3>
-                </div>
-                <div class="card" data-name="Mika">
-                    <img src="https://via.placeholder.com/230" alt="Dam">
-                    <h3>Dam</h3>
-                </div>
-                <div class="card" data-name="Zane">
-                    <img src="https://via.placeholder.com/230" alt="Marymoon">
-                    <h3>Marymoon</h3>
-                </div>
-            </div>
-        </section>
+<section id="contato">
+    <div class="form-container">
+        <form>
+            <input type="text" placeholder="Seu nome">
+            <input type="email" placeholder="Seu e-mail">
+            <textarea placeholder="Mensagem"></textarea>
+            <button type="submit">Enviar</button>
+        </form>
+    </div>
+</section>
 
-        <section class="about-tech">
-            <h2>Tecnologia & Estilo</h2>
-            <p>Design moderno, animações suaves e foco na apresentação visual dos VTubers.</p>
-        </section>
-    </main>
+<!-- MODAL TALENTO -->
+<div class="modal" id="talentModal">
+    <div class="modal-content">
+        <span class="close" onclick="closeTalent()">&times;</span>
 
-    <footer id="contact">
-        <p>© 2026 VTUBERS HUB | Conectando talentos</p>
-    </footer>
+        <img id="modalImg">
+        <h2 id="modalName"></h2>
+        <p id="modalDesc"></p>
 
-    <script src="js/scripts.js"></script>
+        <div class="socials" id="modalSocials"></div>
+    </div>
+</div>
+<script src="/js/scripts.js"></script>
 </body>
 </html>

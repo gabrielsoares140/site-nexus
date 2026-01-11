@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <title>Loja | VTuber Agency</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header>
+    <nav class="navbar">
+        <div class="logo">VTUBER AGENCY</div>
+        <ul>
+            <li><a href="index.html">Início</a></li>
+            <li><a href="index.html#talentos">Talentos</a></li>
+            <li><a href="loja.html">Loja</a></li>
+            <li><a href="index.html#contato">Contato</a></li>
+        </ul>
+    </nav>
+</header>
+
+<section class="loja-section">
+    <h2>Loja Oficial</h2>
+
+    <div class="loja-container">
+
+        <div class="produto">
+            <img src="img/produtos/produto1.jpg">
+            <h3>Moletom Nexus</h3>
+            <p>R$ 149,90</p>
+            <button onclick="addCarrinho('Moletom Nexus', 149.90)">
+                Comprar
+            </button>
+        </div>
+
+        <div class="produto">
+            <img src="img/produtos/produto2.jpg">
+            <h3>Camiseta VTuber</h3>
+            <p>R$ 89,90</p>
+            <button onclick="addCarrinho('Camiseta VTuber', 89.90)">
+                Comprar
+            </button>
+        </div>
+
+        <div class="produto">
+            <img src="img/produtos/produto3.jpg">
+            <h3>Caneca Nexus</h3>
+            <p>R$ 49,90</p>
+            <button onclick="addCarrinho('Caneca Nexus', 49.90)">
+                Comprar
+            </button>
+        </div>
+
+    </div>
+
+    <!-- CARRINHO -->
+    <div class="carrinho">
+        <h3>Carrinho</h3>
+        <ul id="listaCarrinho"></ul>
+        <p id="total">Total: R$ 0,00</p>
+
+        <button class="finalizar" onclick="finalizarCompra()">
+    Finalizar Compra (Pix)
+        </button>
+<div id="pixArea"></div>
+
+    </div>
+</section>
+
+<script src="/js/scripts.js"></script>
+
+
+</body>
+</html>
